@@ -2,12 +2,15 @@
 layout: post
 title: raspberry pi function
 ---
-1. disable internal wifi on boot 2017-06-15 10:35 
- Just put these to the file /etc/modprobe.d/raspi-blacklist.conf
+1. make refind having access to debian 2017-08-15 
+  EFI is considered to be the replacement for bios. run the following commands on debian machine:
 {% highlight bash %}
-blacklist brcmfmac
-blacklist brcmutil
+grub-install /dev/sda5
+update-grub
+efibootmgr -c -d /dev/sda5 -p 1 -w -L debian -l \EFI\debian\grubx64.efi
+efibootmgr --verbose
 {% endhighlight %}
+  It needs to be noticed that in some cases 1. the screen appears to be black 2. nothings was happening after seleting debian. for the two sympoton, just try to wait patiently, and perhapse try to increase the back light(f2).
 
 2. use normal lan cable to connect laptop with rpi
   This procedure is extremely important when using headless rpi as logger in the remote area.

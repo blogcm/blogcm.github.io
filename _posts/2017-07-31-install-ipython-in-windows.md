@@ -53,6 +53,7 @@ iface eth2 inet static
 
 now the system always get ip based on the static prescription.
 
-
+1. install anaconda
+2. the slash '/' in linux is equivalent to '\\' in windows
 
 
