@@ -51,7 +51,7 @@ iface eth2 inet static
     netmask 255.255.0.0
     #your network address "family"
     broadcast 169.254.255.255
-{% highlight bash %}
+{% endhighlight %}
 
 
 now the system always get ip based on the static prescription.
