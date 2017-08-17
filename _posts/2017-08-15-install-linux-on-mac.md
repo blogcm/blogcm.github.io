@@ -1,6 +1,6 @@
 ---
 layout: post
-title: raspberry pi function
+title: 2017-08-15-install-linux-on-mac.md
 ---
 1. make refind having access to debian 2017-08-15 
   EFI is considered to be the replacement for bios. run the following commands on debian machine:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: raspberry pi function
+title: install ipython in windows
 ---
 1. disable internal wifi on boot 2017-06-15 10:35 
  Just put these to the file /etc/modprobe.d/raspi-blacklist.conf
