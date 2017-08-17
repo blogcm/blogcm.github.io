@@ -13,8 +13,8 @@ npm insall -g phant
 openssl req -nodes -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
 {% endhighlight %}
 following https://stackoverflow.com/questions/10175812/how-to-create-a-self-signed-certificate-with-openssl
-then add the certificate infomation to _/usr/local/lib/node\_modules/phant/lib/https/\_server.js_
-{% highlight js %}
+then add the certificate infomation to '/usr/local/lib/node\_modules/phant/lib/https/\_server.js'
+{% highlight javascript %}
 pp.credentials = function() {
 
   return {
