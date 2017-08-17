@@ -33,8 +33,10 @@ eth0      Link encap:Ethernet  HWaddr b8:27:eb:83:c8:9d
 
 {% highlight bash %}
 source /etc/network/interfaces.d/*
+{% endhighlight %}
 
 # The loopback network interface
+{% highlight bash %}
 auto lo
 iface lo inet loopback
 
@@ -48,8 +50,8 @@ iface eth2 inet static
     netmask 255.255.0.0
     #your network address "family"
     broadcast 169.254.255.255
-{% highlight bash %}
 
+{% endhighlight %}
 
 now the system always get ip based on the static prescription.
 
