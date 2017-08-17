@@ -2,7 +2,9 @@
 layout: post
 title: running jekyll in github
 ---
-2017-06-13 13:00 I have followed all the posts to run the jekyll in a github profile but it does not show the page. turns out, I need to modify the post file first, and perhaps clone and upload once to make sure it is working
+1. 2017-06-13 13:00 I have followed all the posts to run the jekyll in a github profile but it does not show the page. turns out, I need to modify the post file first, and perhaps clone and upload once to make sure it is working
+2. finding the post is not consistent with the files in _posts_  2017-08-17
+  usually this is because compilling was error, the way of avoiding this is to check commits (e.g., https://github.com/blogcm/blogcm.github.io/commits/master ) the mark behind each commits tells if this merge is compilled successfully or not
 
 {% highlight python %}
 import os
