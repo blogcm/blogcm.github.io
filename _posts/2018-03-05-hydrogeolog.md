@@ -5,6 +5,7 @@ title: webpage install try
 <!---this is comment---> 
 # 1. making raspberry pi connecting with arduino using gpio without ftdi
   I have been thinking about this a lot and finally got solution:
+
 ![image](/images/rpi_arduino_serial.png)
 
 {% highlight bash %}
