@@ -5,15 +5,15 @@
   border: 1px solid #ddd;
   -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
   -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  box-shadow: 3px 3px rgba(0,0,0,0.1);
-  margin: 20px 0 20px 0;
+  box-shadow: 1px 1px rgba(0,0,0,0.1);
+  margin: 10px 0 10px 0;
   overflow: scroll;
+  width: 100%;
 }
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
 }
-
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */
