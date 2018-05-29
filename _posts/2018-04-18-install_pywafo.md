@@ -6,6 +6,7 @@ title: install pywafo
 1. i had a huge number of probelm in using pywafo, the following commands are the ones i used to install wafo in a debian 8
 
 
+ {% highlight bash %}
 
     1  apt-get update
     2  apt-get install vncviewer
@@ -399,3 +400,4 @@ title: install pywafo
   403  ls
   404  history
   405  history >> output_wafo
+ {% endhighlight %}
