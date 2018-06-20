@@ -201,7 +201,7 @@ The access point setup is almost the same as that shown in the previous section.
 interface=wlan0
 bridge=br0
 #driver=nl80211
-ssid=NameOfNetwork
+ssid=hydrogeologger
 hw_mode=g
 channel=7
 wmm_enabled=0
@@ -209,7 +209,7 @@ macaddr_acl=0
 auth_algs=1
 ignore_broadcast_ssid=0
 wpa=2
-wpa_passphrase=AardvarkBadgerHedgehog
+wpa_passphrase=123123123
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
