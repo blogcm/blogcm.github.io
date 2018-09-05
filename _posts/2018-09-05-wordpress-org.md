@@ -1,9 +1,9 @@
 ---
 layout: post
-title: raspberry pi skills
+title: installing wordpress on aliyun
 ---
 
-# 1. disable internal wifi on boot 2017-06-15 10:35 
+# 1. ali yun install for wordpress 2018-09-05 10:35 
 install required software
 
  {% highlight bash %}
@@ -50,11 +50,15 @@ define('DB_PASSWORD', 'dbpassword');
 above is important
 
 NOTE
+
  the file address is /var/www/html/    in debian stretch
+
 chinese support is done by enable a plugin multiligual 
  
 reference:
+
 https://linuxconfig.org/how-to-install-wordpress-on-debian-9-stretch-linux
+
 https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-debian-7
 
 
