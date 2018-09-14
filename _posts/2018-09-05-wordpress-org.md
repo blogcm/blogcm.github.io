@@ -64,6 +64,20 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-deb
 
 
 
-# 2. use normal lan cable to connect laptop with rpi
-  This procedure is extremely important when using headless rpi as logger in the remote area.
+# 2. the password for root in mysql is lost
 
+https://stackoverflow.com/questions/41645309/mysql-error-access-denied-for-user-rootlocalhost
+
+the etc location is /etc/mysql/my.cnf
+
+add both 
+[mysqld] 
+
+skip-grant-tables 
+
+now run 
+
+mysql -u root -p
+
+
+second, the 
