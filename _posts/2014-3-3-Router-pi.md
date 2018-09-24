@@ -1,6 +1,6 @@
 ---
 layout: post
-title: paste for making a router
+title: Making a router using rpi
 ---
 # Setting up a Raspberry Pi as an access point in a standalone network (NAT)
 
@@ -221,3 +221,16 @@ There should now be a functioning bridge between the wireless LAN and the Ethern
 
 The `ifconfig` command will show the bridge, which will have been allocated an IP address via the wired Ethernet's DHCP server. The `wlan0` and `eth0` no longer have IP addresses, as they are now controlled by the bridge. It is possible to use a static IP address for the bridge if required, but generally, if the Raspberry Pi access point is connected to a ADSL router, the DHCP address will be fine.
 
+## ----------------------------------------------------------------------------------
+<a name="enquiry"></a>
+
+
+
+/var/lib/misc/dnsmasq.leases 
+
+get all the ip addresses that has been released
+
+
+reference:
+
+https://superuser.com/questions/1238698/get-all-the-ip-addresses-given-out-by-dhcp-server-with-dnsmasq-and-hostapd
