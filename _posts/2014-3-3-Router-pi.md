@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making a router using rpi
+title: Making an internet router using RPI
 ---
 # Setting up a Raspberry Pi as an access point in a standalone network (NAT)
 
@@ -13,16 +13,16 @@ To add a Raspberry Pi-based access point to an existing network, see [this secti
 In order to work as an access point, the Raspberry Pi will need to have access point software installed, along with DHCP server software to provide connecting devices with a network address. Ensure that your Raspberry Pi is using an up-to-date version of Raspbian (dated 2017 or later).
 
 Use the following to update your Raspbian installation:
-```
+```bash
 sudo apt-get update
 sudo apt-get upgrade
 ```
 Install all the required software in one go with this command: 
-```
+```bash
 sudo apt-get install dnsmasq hostapd
 ```
 Since the configuration files are not ready yet, turn the new software off as follows: 
-```
+```bash
 sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd
 ```
@@ -32,7 +32,7 @@ sudo systemctl stop hostapd
 We are configuring a standalone network to act as a server, so the Raspberry Pi needs to have a static IP address assigned to the wireless port. This documentation assumes that we are using the standard 192.168.x.x IP addresses for our wireless network, so we will assign the server the IP address 192.168.4.1. It is also assumed that the wireless device being used is `wlan0`.
 
 To configure the static IP address, edit the dhcpcd configuration file with: 
-```
+```bash
 sudo nano /etc/dhcpcd.conf
 ```
 Go to the end of the file and edit it so that it looks like the following:
@@ -69,15 +69,15 @@ There are many more options for dnsmasq; see the [dnsmasq documentation](http://
 
 ## Configuring the access point host software (hostapd)
 
-You need to edit the hostapd configuration file, located at /etc/hostapd/hostapd.conf, to add the various parameters for your wireless network. After initial install, this will be a new/empty file.
+You need to edit the hostapd configuration file, located at */etc/hostapd/hostapd.conf*, to add the various parameters for your wireless network. After initial install, this will be a new/empty file.
 
-```
+```bash
 sudo nano /etc/hostapd/hostapd.conf
 ```
 
 Add the information below to the configuration file. This configuration assumes we are using channel 7, with a network name of NameOfNetwork, and a password AardvarkBadgerHedgehog. Note that the name and password should **not** have quotes around them. The passphrase should be between 8 and 64 characters in length.
 
-```
+```bash
 interface=wlan0
 driver=nl80211
 ssid=NameOfNetwork
@@ -96,13 +96,13 @@ rsn_pairwise=CCMP
 
 We now need to tell the system where to find this configuration file.
 
-```
+```bash
 sudo nano /etc/default/hostapd
 ```
 
 Find the line with #DAEMON_CONF, and replace it with this:
 
-```
+```bash
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 ```
 
@@ -110,7 +110,7 @@ DAEMON_CONF="/etc/hostapd/hostapd.conf"
 
 Now start up the remaining services:
 
-```
+```bash
 sudo systemctl start hostapd
 sudo systemctl start dnsmasq
 ```
@@ -148,7 +148,7 @@ By this point, the Raspberry Pi is acting as an access point, and other devices 
 
 ## ----------------------------------------------------------------------------------
 <a name="internet-sharing"></a>
-## Using the Raspberry Pi as an access point to share an internet connection (bridge)
+## Using the Raspberry Pi as an access point to share an internet connection (bridge) NOT NECESSARY
 
 One common use of the Raspberry Pi as an access point is to provide wireless connections to a wired Ethernet connection, so that anyone logged into the access point can access the internet, providing of course that the wired Ethernet on the Pi can connect to the internet via some sort of router.
 
